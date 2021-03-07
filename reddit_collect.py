@@ -19,6 +19,7 @@ reddit = praw.Reddit(
 
 tele = Updater(credential['bot_token'], use_context=True)
 debug_group = tele.bot.get_chat(credential['debug_group'])
+channel = tele.bot.get_chat(credential['channel'])
 
 @log_on_fail(debug_group)
 def run():
