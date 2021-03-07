@@ -8,6 +8,7 @@ from telegram.ext import Updater
 import plain_db
 import reddit_2_album
 import album_sender
+import time
 
 with open('credential') as f:
 	credential = yaml.load(f, Loader=yaml.FullLoader)
@@ -36,7 +37,9 @@ def run():
 				continue
 			url = 'http://www.reddit.com' + submission.permalink
 			album = reddit_2_album.get(url)
-			album_sender.send_v2(channel, album)
+			result = album_sender.send_v2(channel, album)
+			result_len = len(result)
+			# time.sleep(result_len * 10 + (result_len ** 2) / 2)
 
 if __name__ == '__main__':
 	run()
