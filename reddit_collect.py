@@ -9,6 +9,9 @@ from telegram.ext import Updater
 with open('credential') as f:
 	credential = yaml.load(f, Loader=yaml.FullLoader)
 
+with open('db/setting') as f:
+	setting = yaml.load(f, Loader=yaml.FullLoader)
+
 reddit = praw.Reddit(
 	client_id=credential['reddit_client_id'],
 	client_secret=credential['reddit_client_secret'],
@@ -23,7 +26,10 @@ channel = tele.bot.get_chat(credential['channel'])
 
 @log_on_fail(debug_group)
 def run():
-	print(reddit.user.me())
+	for subname in setting['subreddits']:
+		subreddit = reddit.subreddit(subname)
+		for submission in subreddit.hot(limit=10):
+			print(submission.title, submission.score, submission.url)
 
 if __name__ == '__main__':
 	run()
