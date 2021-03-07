@@ -5,12 +5,16 @@ import yaml
 import praw
 from telegram_util import log_on_fail
 from telegram.ext import Updater
+import plain_db
+import reddit_2_album
 
 with open('credential') as f:
 	credential = yaml.load(f, Loader=yaml.FullLoader)
 
 with open('db/setting') as f:
 	setting = yaml.load(f, Loader=yaml.FullLoader)
+
+existing = plain_db.loadKeyOnlyDB('existing')
 
 reddit = praw.Reddit(
 	client_id=credential['reddit_client_id'],
@@ -28,8 +32,17 @@ channel = tele.bot.get_chat(credential['channel'])
 def run():
 	for subname in setting['subreddits']:
 		subreddit = reddit.subreddit(subname)
-		for submission in subreddit.hot(limit=10):
-			print(submission.title, submission.score, submission.url)
+		for submission in subreddit.hot(limit=30):
+			if submission.score < 500:
+				continue
+			submission = reddit.submission('lz1nj2')
+			if not existing.add(submission.url):
+				continue
+			if submittsion.permalink != submission.url and not existing.add(submittsion.permalink):
+				continue
+			url = 'https://www.reddit.com' + submission.permalink
+			album = reddit_2_album.get(url)
+			album_sender.send_v2(channel, album)
 
 if __name__ == '__main__':
 	run()
