@@ -28,7 +28,7 @@ channel = tele.bot.get_chat(credential['channel'])
 def run():
 	for subname in setting['subreddits']:
 		subreddit = reddit.subreddit(subname)
-		for submission in subreddit.hot(limit=500):
+		for submission in subreddit.hot():
 			if submission.score < 500:
 				continue
 			if not existing.add(submission.url):
@@ -39,7 +39,7 @@ def run():
 			album = reddit_2_album.get(url)
 			result = album_sender.send_v2(channel, album)
 			result_len = len(result)
-			# time.sleep(result_len * 10 + (result_len ** 2) / 2)
+			time.sleep(result_len * 10 + (result_len ** 2) / 2)
 
 if __name__ == '__main__':
 	run()
