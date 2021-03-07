@@ -27,7 +27,7 @@ channel = tele.bot.get_chat(credential['channel'])
 def run():
 	for subname in setting['subreddits']:
 		subreddit = reddit.subreddit(subname)
-		for submission in subreddit.hot(limit=60):
+		for submission in subreddit.hot(limit=500):
 			if submission.score < 500:
 				continue
 			if not existing.add(submission.url):
