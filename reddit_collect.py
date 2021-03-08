@@ -22,25 +22,29 @@ reddit = reddit_2_album.reddit
 
 tele = Updater(credential['bot_token'], use_context=True)
 debug_group = tele.bot.get_chat(credential['debug_group'])
-channel = tele.bot.get_chat(credential['channel'])
 
 @log_on_fail(debug_group)
 def run():
-	for subname, subsetting in setting['subreddits'].items():
-		subreddit = reddit.subreddit(subname)
-		for submission in subreddit.hot(limit=2000):
-			if submission.score < subsetting.get('upvote', 500):
-				continue
-			if not existing.add(submission.url):
-				continue
-			if submission.permalink != submission.url and not existing.add(submission.permalink):
-				continue
-			url = 'http://www.reddit.com' + submission.permalink
-			album = reddit_2_album.get(url)
-			result = album_sender.send_v2(channel, album)
-			result_len = len(result)
-			time.sleep(result_len * 10 + (result_len ** 2) / 2)
-			break
+	for channel_id, detail in setting.items():
+		channel = tele.bot.get_chat(channel_id)
+		for subname, subsetting in detail.items():
+			subreddit = reddit.subreddit(subname)
+			send = False
+			for submission in subreddit.hot(limit=2000):
+				if submission.score < subsetting.get('upvote', 500):
+					continue
+				if not existing.add(submission.url):
+					continue
+				if submission.permalink != submission.url and not existing.add(submission.permalink):
+					continue
+				url = 'http://www.reddit.com' + submission.permalink
+				album = reddit_2_album.get(url)
+				result = album_sender.send_v2(channel, album)
+				result_len = len(result)
+				time.sleep(result_len * 10 + (result_len ** 2) / 2)
+				send = True
+				break
+			print(subname, 'send:', send)
 
 if __name__ == '__main__':
 	run()

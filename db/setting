@@ -1,7 +1,8 @@
-subreddits:
+-1001212716536:
   women: {}
   askwomen: {}
-  trollxchromosomes: {}
+  trollxchromosomes:
+    upvote: 2000
   femmethoughts: {}
   thegirlsurvivalguide: {}
   WitchesVsPatriarchy: {}
@@ -14,3 +15,12 @@ subreddits:
   PhilosophyTube: {}
   AskFeminists: {}
   Feminism: {}
+  worldnews:
+    upvote: 2000
+  news:
+    upvote: 2000
+  politics:
+    upvote: 2000
+-1001085427906:
+  chonglangtv: {}
+  china_irl: {}
