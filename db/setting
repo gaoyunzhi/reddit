@@ -1,16 +1,16 @@
 subreddits:
-- women
-- askwomen
-- trollxchromosomes
-- femmethoughts
-- thegirlsurvivalguide
-- WitchesVsPatriarchy 
-- scientits 
-- GirlsGoneWired 
-- GirlGamers 
-- NotHowGirlsWork 
-- blackladies 
-- ContraPoints 
-- PhilosophyTube
-- AskFeminists
-- Feminism
+  women: {}
+  askwomen: {}
+  trollxchromosomes: {}
+  femmethoughts: {}
+  thegirlsurvivalguide: {}
+  WitchesVsPatriarchy: {}
+  scientits: {}
+  GirlsGoneWired: {}
+  GirlGamers: {}
+  NotHowGirlsWork: {}
+  blackladies: {}
+  ContraPoints: {} 
+  PhilosophyTube: {}
+  AskFeminists: {}
+  Feminism: {}
