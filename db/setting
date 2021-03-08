@@ -16,11 +16,13 @@
   AskFeminists: {}
   Feminism: {}
   worldnews:
-    upvote: 2000
+    upvote: 10000
   news:
-    upvote: 2000
+    upvote: 10000
   politics:
-    upvote: 2000
+    upvote: 10000
 -1001085427906:
-  chonglangtv: {}
-  china_irl: {}
+  chonglangtv:
+    upvote: 200
+  china_irl:
+    upvote: 200
