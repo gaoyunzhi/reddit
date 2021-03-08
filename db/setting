@@ -23,7 +23,8 @@
   NotHowGirlsWork: {}
   blackladies: {}
   ContraPoints: {} 
-  PhilosophyTube: {}
+  PhilosophyTube:
+    upvote: 10000
   AskFeminists: {}
   Feminism: {}
 -1001085427906:
