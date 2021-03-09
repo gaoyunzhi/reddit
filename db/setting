@@ -15,11 +15,13 @@
     upvote: 10000
   asktransgender: {}
   femmethoughts: {}
-  thegirlsurvivalguide: {}
+  thegirlsurvivalguide:
+    upvote: 2000
   WitchesVsPatriarchy: {}
   scientits: {}
   GirlsGoneWired: {}
-  GirlGamers: {}
+  GirlGamers:
+    upvote: 2000
   blackladies:
     upvote: 2000
   ContraPoints: {} 
