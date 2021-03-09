@@ -16,10 +16,13 @@
     upvote: 2000
   trans:
     upvote: 10000
-  asktransgender: {}
+  asktransgender:
+    upvote: 2000
+    only_recent: 100
   femmethoughts: {}
   thegirlsurvivalguide:
     upvote: 2000
+    only_recent: 100
   WitchesVsPatriarchy:
     upvote: 2000
   scientits: {}
