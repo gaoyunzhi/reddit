@@ -1,9 +1,9 @@
 -1001212716536:
   worldnews:
-    upvote: 10000
-    only_recent: 20
+    upvote: 20000
+    only_recent: 10
   news:
-    upvote: 10000
+    upvote: 20000
     only_recent: 20
   politics:
     upvote: 10000
