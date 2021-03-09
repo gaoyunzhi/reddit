@@ -30,7 +30,8 @@ def run():
 		for subname, subsetting in detail.items():
 			subreddit = reddit.subreddit(subname)
 			send = False
-			for submission in subreddit.hot(limit=subsetting.get('only_recent', 2000)):
+			for submission in subreddit.hot(
+					limit=subsetting.get('only_recent', 2000)):
 				if submission.score < subsetting.get('upvote', 500):
 					continue
 				if not existing.add(submission.url):
