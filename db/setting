@@ -13,7 +13,8 @@
   trollxchromosomes:
     upvote: 2000
   lgbt:
-    upvote: 2000
+    upvote: 3000
+    only_recent: 50
   trans:
     upvote: 10000
   asktransgender:
@@ -29,6 +30,7 @@
   GirlsGoneWired: {}
   GirlGamers:
     upvote: 2000
+    only_recent: 50
   blackladies:
     upvote: 2000
   PhilosophyTube:
