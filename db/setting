@@ -20,7 +20,8 @@
   scientits: {}
   GirlsGoneWired: {}
   GirlGamers: {}
-  blackladies: {}
+  blackladies:
+    upvote: 2000
   ContraPoints: {} 
   PhilosophyTube:
     upvote: 10000
