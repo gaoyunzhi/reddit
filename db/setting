@@ -17,14 +17,16 @@
   femmethoughts: {}
   thegirlsurvivalguide:
     upvote: 2000
-  WitchesVsPatriarchy: {}
+  WitchesVsPatriarchy:
+    upvote: 2000
   scientits: {}
   GirlsGoneWired: {}
   GirlGamers:
     upvote: 2000
   blackladies:
     upvote: 2000
-  ContraPoints: {} 
+  ContraPoints:
+    upvote: 2000
   PhilosophyTube:
     upvote: 10000
   AskFeminists: {}
