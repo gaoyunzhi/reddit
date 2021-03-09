@@ -1,10 +1,13 @@
 -1001212716536:
   worldnews:
     upvote: 10000
+    only_recent: 20
   news:
     upvote: 10000
+    only_recent: 20
   politics:
     upvote: 10000
+    only_recent: 20
   women: {}
   askwomen: {}
   trollxchromosomes:
@@ -25,10 +28,9 @@
     upvote: 2000
   blackladies:
     upvote: 2000
-  ContraPoints:
-    upvote: 2000
   PhilosophyTube:
     upvote: 10000
+    only_recent: 20
   AskFeminists: {}
   Feminism: {}
 -1001085427906:
