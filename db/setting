@@ -8,6 +8,8 @@
   politics:
     upvote: 10000
     only_recent: 5
+  atheism:
+    upvote: 3000
   women: {}
   askwomen: {}
   trollxchromosomes:
