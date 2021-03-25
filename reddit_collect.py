@@ -45,7 +45,6 @@ def run():
 				time.sleep(result_len * 10 + (result_len ** 2) / 2)
 				send = True
 				break
-			print(subname, 'send:', send)
 			time.sleep(10)
 
 if __name__ == '__main__':
