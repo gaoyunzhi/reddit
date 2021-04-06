@@ -10,6 +10,7 @@
     only_recent: 5
   atheism:
     upvote: 3000
+  agender: {}
   women: {}
   askwomen: {}
   trollxchromosomes:
