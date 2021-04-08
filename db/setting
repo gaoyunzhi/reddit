@@ -1,13 +1,15 @@
 -1001212716536:
   worldnews:
-    upvote: 20000
-    only_recent: 5
+    upvote: 50000
+    only_recent: 3
   news:
-    upvote: 20000
-    only_recent: 5
+    upvote: 50000
+    only_recent: 3
   politics:
+    upvote: 20000
+    only_recent: 3
+  pics:
     upvote: 10000
-    only_recent: 5
   atheism:
     upvote: 3000
   agender: {}
