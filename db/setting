@@ -1,13 +1,13 @@
 -1001212716536:
   worldnews:
-    upvote: 50000
-    only_recent: 3
+    upvote: 500000
+    only_recent: 1
   news:
-    upvote: 50000
-    only_recent: 3
+    upvote: 500000
+    only_recent: 1
   politics:
-    upvote: 20000
-    only_recent: 3
+    upvote: 200000
+    only_recent: 1
   pics:
     upvote: 10000
   atheism:
@@ -28,7 +28,7 @@
     upvote: 2000
     only_recent: 50
   WitchesVsPatriarchy:
-    upvote: 2000
+    upvote: 10000
   scientits: {}
   GirlsGoneWired: {}
   GirlGamers:
