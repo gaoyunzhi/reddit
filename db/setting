@@ -9,7 +9,7 @@
     upvote: 200000
     only_recent: 1
   pics:
-    upvote: 10000
+    upvote: 100000
   atheism:
     upvote: 3000
   agender: {}
