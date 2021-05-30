@@ -43,8 +43,6 @@ def run():
 				if not album.imgs and submission.score < subsetting.get('upvote', 500) * 10:
 					continue
 				result = album_sender.send_v2(channel, album)
-				result_len = len(result)
-				time.sleep(result_len * 10 + (result_len ** 2) / 2)
 				send = True
 				break
 			time.sleep(10)
