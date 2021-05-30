@@ -11,12 +11,12 @@
   pics:
     upvote: 100000
   atheism:
-    upvote: 3000
+    upvote: 2000
   agender: {}
   women: {}
   askwomen: {}
   trollxchromosomes:
-    upvote: 2000
+    upvote: 1500
   TwoXChromosomes: {}
   trans:
     upvote: 10000
@@ -25,7 +25,7 @@
     only_recent: 100
   femmethoughts: {}
   thegirlsurvivalguide:
-    upvote: 2000
+    upvote: 1500
     only_recent: 50
   WitchesVsPatriarchy:
     upvote: 10000
