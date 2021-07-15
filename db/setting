@@ -18,8 +18,6 @@
   trollxchromosomes:
     upvote: 1500
   TwoXChromosomes: {}
-  trans:
-    upvote: 10000
   asktransgender:
     upvote: 2000
     only_recent: 100

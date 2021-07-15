@@ -45,7 +45,6 @@ def run():
 				result = album_sender.send_v2(channel, album)
 				send = True
 				break
-			time.sleep(30)
 
 if __name__ == '__main__':
 	run()
