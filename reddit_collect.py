@@ -22,6 +22,7 @@ reddit = reddit_2_album.reddit
 
 tele = Updater(credential['bot_token'], use_context=True)
 debug_group = tele.bot.get_chat(credential['debug_group'])
+translate_channel = tele.bot.get_chat(credential['translate_channel'])
 
 @log_on_fail(debug_group)
 def run():
@@ -42,7 +43,8 @@ def run():
 				album = reddit_2_album.get(url)
 				if not album.imgs and submission.score < subsetting.get('upvote', 500) * 10:
 					continue
-				result = album_sender.send_v2(channel, album)
+				album_sender.send_v2(channel, album)
+				album_sender.send_v2(translate_channel, album.toPlain())
 				send = True
 				break
 
