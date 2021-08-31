@@ -3,7 +3,7 @@
 
 import yaml
 import praw
-from telegram_util import log_on_fail
+from telegram_util import log_on_fail, isCN
 from telegram.ext import Updater
 import plain_db
 import reddit_2_album
@@ -29,6 +29,7 @@ def run():
 	for channel_id, detail in setting.items():
 		channel = tele.bot.get_chat(channel_id)
 		for subname, subsetting in detail.items():
+			print(subname)
 			subreddit = reddit.subreddit(subname)
 			send = False
 			for submission in subreddit.hot(
@@ -44,7 +45,11 @@ def run():
 				if not album.imgs and submission.score < subsetting.get('upvote', 500) * 10:
 					continue
 				album_sender.send_v2(channel, album)
-				album_sender.send_v2(translate_channel, album.toPlain())
+				if channel_id == -1001085427906 or isCN(album.cap):
+					backup_channel = debug_group
+				else:
+					backup_channel = translate_channel
+				album_sender.send_v2(backup_channel, album.toPlain())
 				send = True
 				break
 
