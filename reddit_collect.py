@@ -29,7 +29,6 @@ def run():
 	for channel_id, detail in setting.items():
 		channel = tele.bot.get_chat(channel_id)
 		for subname, subsetting in detail.items():
-			print(subname)
 			subreddit = reddit.subreddit(subname)
 			send = False
 			for submission in subreddit.hot(
